@@ -27,7 +27,6 @@ def Bf(arr):
 
 print(Bf([0,1,0,2,1,0,3,1,0,1,2]))
 
-    
 def doublePointer(arr):
   pointerLeft = 0 
   pointerRight = len(arr)-1
@@ -50,10 +49,9 @@ def doublePointer(arr):
       if maxRight > arr[workingPointer]:
         total += maxRight - arr[workingPointer]
       else:
-        maxRight = pointerRight
-      pointerLeft = pointerRight - 1
+        maxRight = arr[pointerRight]
+      pointerRight = pointerRight - 1
   return total
 
 print(doublePointer([0,1,0,2,1,0,3,1,0,1,2]))
-    
         
